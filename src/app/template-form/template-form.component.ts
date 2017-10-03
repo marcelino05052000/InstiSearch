@@ -9,7 +9,8 @@ export class TemplateFormComponent implements OnInit {
 
   usuario: any = {
     nome: null,
-    email: null
+    email: null,
+    password: null
   }
 
   onSubmit(form){
