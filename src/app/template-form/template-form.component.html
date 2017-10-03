@@ -9,10 +9,10 @@
     <!--<div>
       {{ nome.className }}
     </div>-->
-    <span class="glyphicon glyphicon-warning-sign form-control-feedback" 
-    aria-hidden="true" *ngIf="!nome.valid && nome.touched"></span>
-    <span id="nome" class="sr-only" *ngIf="!nome.valid && nome.touched">(warning)</span>
-    <div *ngIf="!nome.valid && nome.touched" 
+      <span class="glyphicon glyphicon-warning-sign form-control-feedback" 
+      aria-hidden="true" *ngIf="!nome.valid && nome.touched"></span>
+      <span id="nome" class="sr-only" *ngIf="!nome.valid && nome.touched">(warning)</span>
+      <div *ngIf="!nome.valid && nome.touched" 
     class="alert alert-danger" role="alert">
       Nome é obrigatório!
     </div>
@@ -27,7 +27,7 @@
     required email #email="ngModel">
     <span class="glyphicon glyphicon-warning-sign form-control-feedback" 
     aria-hidden="true" *ngIf="!email.valid && email.touched"></span>
-    <span id="nome" class="sr-only" *ngIf="!email.valid && email.touched">(warning)</span>
+    <span id="email" class="sr-only" *ngIf="!email.valid && email.touched">(warning)</span>
     <div *ngIf="!email.valid && email.touched" 
     class="alert alert-danger" role="alert">
       Email inválido!
@@ -35,19 +35,20 @@
   </div>
 
   <div class="form-group"
-  [class.has-error]="!password.valid && password.touched"
-  [class.has-feedback]="!password.valid && password.touched">
-    <label for="password" class="control-label">Password</label>
-    <input type="password" class="form-control" name="password" 
-    id="password" placeholder="senha" [(ngModel)]="usuario.password" 
-    required email #password="ngModel">
+  [class.has-error]="!senha.valid && senha.touched"
+  [class.has-feedback]="!senha.valid && senha.touched">
+    <label for="senha" class="control-label">Senha</label>
+    <input type="senha" class="form-control" name="senha" 
+    id="senha" placeholder="senha" [(ngModel)]="usuario.senha" 
+    required email #senha="ngModel">
     <span class="glyphicon glyphicon-warning-sign form-control-feedback" 
-    aria-hidden="true" *ngIf="!password.valid && password.touched"></span>
-    <span id="nome" class="sr-only" *ngIf="!password.valid && password.touched">(warning)</span>
-    <div *ngIf="!password.valid && password.touched" 
+    aria-hidden="true" *ngIf="!senha.valid && senha.touched"></span>
+    <span id="senha" class="sr-only" *ngIf="!senha.valid && senha.touched">(warning)</span>
+    <div *ngIf="!senha.valid && senha.touched" 
     class="alert alert-danger" role="alert">
       Senha inválida!
     </div>
   </div>
-  <button type="submit" class="btn btn-primary"[disabled]="!f.valid">Enviar</button>
+  <button pButton type="submit" [disabled]="!f.valid" class="ui-button-primary" label="Enviar" ></button>
+
   </form>
