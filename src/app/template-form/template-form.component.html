@@ -27,7 +27,7 @@
     required email #email="ngModel">
     <span class="glyphicon glyphicon-warning-sign form-control-feedback" 
     aria-hidden="true" *ngIf="!email.valid && email.touched"></span>
-    <span id="email" class="sr-only" *ngIf="!email.valid && email.touched">(warning)</span>
+                                                    <span id="email" class="sr-only" *ngIf="!email.valid && email.touched">(warning)</span>
     <div *ngIf="!email.valid && email.touched" 
     class="alert alert-danger" role="alert">
       Email inválido!
