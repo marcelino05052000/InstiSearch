@@ -6,7 +6,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {CalendarModule} from 'primeng/primeng';
 import {PasswordModule} from 'primeng/primeng';
-import {FieldsetModule} from 'primeng/primeng';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,8 +26,7 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     TemplateFormModule,
     CalendarModule,
-    PasswordModule,
-    FieldsetModule
+    PasswordModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
