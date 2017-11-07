@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from "app/Models/usuario";
 
 @Component({
   selector: 'app-template-form',

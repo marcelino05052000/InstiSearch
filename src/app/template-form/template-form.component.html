@@ -1,4 +1,4 @@
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+<!--<form #f="ngForm" (ngSubmit)="onSubmit(f)" >
   <div class="form-group" 
     [class.has-error]="!nome.valid && nome.touched"
     [class.has-feedback]="!nome.valid && nome.touched">
@@ -8,7 +8,7 @@
     required #nome="ngModel">
     <!--<div>
       {{ nome.className }}
-    </div>-->
+    </div>
       <span class="glyphicon glyphicon-warning-sign form-control-feedback" 
       aria-hidden="true" *ngIf="!nome.valid && nome.touched"></span>
       <span id="nome" class="sr-only" *ngIf="!nome.valid && nome.touched">(warning)</span>
@@ -51,4 +51,34 @@
   </div>
   <button pButton type="submit" [disabled]="!f.valid" class="ui-button-primary" label="Enviar" ></button>
 
-  </form>
+  </form>-->
+
+      <div align="center">
+    <header>
+    <h1>InstiSearch</h1>
+    </header>
+    </div>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+          Cadastre-se      
+      </div>
+      <div class="panel-body">
+
+        <form ngForm #form>
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input [(ngModel)]="usuario.nome" type="text" class="form-control" id="nome" name="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="username">Nome de Usuário:</label>
+            <input [(ngModel)]="usuario.username" type="text" class="form-control" id="username" name="username" required>
+          </div>
+          <div class="form-group">
+              <label for="password">Senha:</label>
+              <input [(ngModel)]="usuario.password" type="password" pPassword class="form-control" id="password" name="password" required>
+            </div>
+            <button pButton type="button" class="ui-button-success" label="Cadastrar-se!" routerLink='/main'></button>
+        </form>
+      </div>
+</div>

@@ -5,8 +5,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'main', component: MainComponent, children: [{ path: 'templateForm', component: TemplateFormComponent}]},
-
+  { path: 'main', component: MainComponent},
+  { path: 'templateForm', component: TemplateFormComponent},
   { path: '', component: LoginComponent}
  
 ];
