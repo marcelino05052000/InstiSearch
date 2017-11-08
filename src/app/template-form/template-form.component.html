@@ -53,15 +53,15 @@
 
   </form>-->
 
-      <div align="center">
-    <header>
+<div align="center">
+  <header>
     <h1>InstiSearch</h1>
-    </header>
-    </div>
+  </header>
+</div>
 <div class="container">
     <div class="panel panel-default">
-        <div class="panel-heading">
-          Cadastre-se      
+      <div class="panel-heading">
+        Cadastre-se
       </div>
       <div class="panel-body">
 
@@ -78,7 +78,7 @@
               <label for="password">Senha:</label>
               <input [(ngModel)]="usuario.password" type="password" pPassword class="form-control" id="password" name="password" required>
             </div>
-            <button pButton type="button" class="ui-button-success" label="Cadastrar-se!" routerLink='/main'></button>
+            <button pButton type="button" class="ui-button-success" label="Cadastrar" (click)="fazerCadastro()" routerLink='/login'></button>
         </form>
       </div>
 </div>

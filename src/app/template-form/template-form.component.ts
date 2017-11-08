@@ -1,5 +1,6 @@
+import { AuthService } from './../login/auth.service';
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from "app/Models/usuario";
+import { Usuario } from 'app/Models/usuario';
 
 @Component({
   selector: 'app-template-form',
@@ -8,20 +9,21 @@ import { Usuario } from "app/Models/usuario";
 })
 export class TemplateFormComponent implements OnInit {
 
-  usuario: any = {
-    nome: null,
-    email: null,
-    password: null
-  }
+  private usuario: Usuario = new Usuario();
 
-  onSubmit(form){
+  /*onSubmit(form) {
     console.log(form);
-    //console.log(this.usuario);
-  }
-  
-  constructor() { }
+    // console.log(this.usuario);
+  }*/
+
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
+  }
+
+  fazerCadastro() {
+    // console.log(this.usuario)
+    this.authService.fazerCadastro(this.usuario);
   }
 
 }

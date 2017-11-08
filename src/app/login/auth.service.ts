@@ -1,5 +1,5 @@
+import { Usuario } from 'app/Models/usuario';
 import { Router } from '@angular/router'
-import { Usuario } from './usuario';
 import { Injectable } from '@angular/core';
 
 @Injectable()
@@ -10,8 +10,19 @@ export class AuthService {
   constructor(private router: Router) { }
 
   fazerLogin(usuario: Usuario) {
-    if(usuario.nome === 'usuario@email.com' &&
-      usuario.senha === '123456') {
+    if (usuario.username === 'usuario@email.com' &&
+      usuario.password === '123456') {
+        this.usuarioAutenticado = true;
+
+        this.router.navigate(['/'])
+    } else {
+      this.usuarioAutenticado = false;
+    }
+  }
+
+  fazerCadastro(usuario: Usuario) {
+    if (usuario.nome === 'nome' && usuario.username === 'usuario@email.com' &&
+      usuario.password === '123456') {
         this.usuarioAutenticado = true;
 
         this.router.navigate(['/'])
