@@ -18,10 +18,9 @@ export class TemplateFormComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
-  fazerCadastro() {
+  fazerCadastro(usuario: Usuario) {
     // console.log(this.usuario)
     this.authService.fazerCadastro(this.usuario);
   }
